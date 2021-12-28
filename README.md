@@ -1,3 +1,5 @@
+![airbnb-clone](https://user-images.githubusercontent.com/80658809/147516012-7ae0255b-9bc0-4215-b178-ef75111cde60.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
