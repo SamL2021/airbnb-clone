@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./Components/NavBar";
+import Hero from "./Components/Hero";
+import { Card } from "./Components/Card/Card";
+import data from "./Assests/data/data";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const cards = data.map((item) => {
+        return (
+            <Card
+                key={item.id}
+                // Pass in entire object
+                item={item}
+                // img={item.coverImg}
+                // rating={item.stats.rating}
+                // reviewCount={item.stats.reviewCount}
+                // location={item.location}
+                // title={item.title}
+                // price={item.price}
+                // openSpots={item.openSpots}
+
+                // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals
+                // Could use spread syntax as alternative
+                // {...item}
+            />
+        );
+    });
+
+    return (
+        <div className="App">
+            <NavBar />
+            <Hero />
+            <section className="cards-list">{cards}</section>
+        </div>
+    );
 }
 
 export default App;
